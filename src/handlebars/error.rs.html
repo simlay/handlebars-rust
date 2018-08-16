@@ -269,7 +269,7 @@
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">string</span>::<span class="ident">FromUtf8Error</span>;
 
 <span class="kw">use</span> <span class="ident">serde_json</span>::<span class="ident">error</span>::<span class="ident">Error</span> <span class="kw">as</span> <span class="ident">SerdeError</span>;
-<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">not</span>(<span class="ident">feature</span><span class="op">=</span><span class="string">&quot;no_dir_source&quot;</span>))]</span>
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">not</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;no_dir_source&quot;</span>))]</span>
 <span class="kw">use</span> <span class="ident">walkdir</span>::<span class="ident">Error</span> <span class="kw">as</span> <span class="ident">WalkdirError</span>;
 
 <span class="kw">use</span> <span class="ident">template</span>::<span class="ident">Parameter</span>;
@@ -484,7 +484,7 @@
     }
 }
 
-<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">not</span>(<span class="ident">feature</span><span class="op">=</span><span class="string">&quot;no_dir_source&quot;</span>))]</span>
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">not</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;no_dir_source&quot;</span>))]</span>
 <span class="kw">impl</span> <span class="ident">From</span><span class="op">&lt;</span><span class="ident">WalkdirError</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">TemplateFileError</span> {
     <span class="kw">fn</span> <span class="ident">from</span>(<span class="ident">error</span>: <span class="ident">WalkdirError</span>) <span class="op">-&gt;</span> <span class="ident">TemplateFileError</span> {
         <span class="kw">let</span> <span class="ident">path_string</span>: <span class="ident">String</span> <span class="op">=</span> <span class="ident">error</span>
